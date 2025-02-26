@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Annapoorna</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Anna<b class="highlight">poorna</b></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span class="highlight">Annapoorna</span></h1>
+        <p>Helping to reduce food waste and feed the needy.</p>
+        <a href="about.html" class="btn">Learn More</a>
+        <!-- Donate Now Button -->
+        <a href="donate.html" class="donate-btn">Donate Now</a>
+    </div>
+</section>
+
+<section class="services">
+    <h2>What We Do</h2>
+    <div class="service-container">
+        <div class="service-box">
+            <img src="D:\web p\anapoorna\images\p1.jpg" alt="Food Donation">
+            <h3>Food Collection</h3>
+            <p>We collect surplus food from hotels, restaurants, and events.</p>
+        </div>
+        <div class="service-box">
+            <img src="D:\web p\anapoorna\images\p4.jpg" alt="Charity Distribution">
+            <h3>Charity Distribution</h3>
+            <p>We distribute food to those in need through NGOs and volunteers.</p>
+        </div>
+        <div class="service-box">
+            <img src="D:\web p\anapoorna\images\p3.png" alt="Awareness Campaigns">
+            <h3>Awareness Campaigns</h3>
+            <p>We educate people on food waste reduction and sustainability.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p class="about">
+            <span>About Us:</span> We collect excess food from donors and distribute it to those in need.
+        </p>
+    </div>
+    <div class="footer-center">
+        <p><span>Contact:</span> (+00) 00000-00000</p>
+        <p>Email: <a href="#">anapoorna@gmail.com</a></p>
+        <div class="social">
+            <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="https://www.instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <h2>Anna<span class="highlight">poorna</span></h2>
+        <p class="menu">
+            <a href="#">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="profile.php">Profile</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="copyright">Food Donate &copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

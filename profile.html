@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select User Type - Annapoorna</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Anna<b class="highlight">poorna</b></div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="selection-section">
+    <div class="selection-container">
+        <h2>Select Your Role</h2>
+        <div class="button-container">
+            <a href="donor.html" class="btn btn-donor">Donor</a>
+            <a href="ngo.html" class="btn btn-ngo">NGO</a>
+            <a href="admin.html" class="btn btn-admin">Admin</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Annapoorna. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-bar").classList.toggle("active");
+}
+</script>
+</body>
+</html>

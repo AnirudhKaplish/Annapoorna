@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Annapoorna</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Anna<b class="highlight">poorna</b></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+<section class="about-section">
+    <p class="heading">About Us</p>
+    <div class="para">
+        <p>We are a passionate team committed to addressing the issue of food waste in India. Our mission is to create a seamless system that connects food donors with charities and NGOs while significantly reducing the environmental impact of food waste.</p>
+    </div>
+</section>
+
+<section class="team-section">
+    <p class="heading">Our Team</p>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="team-member-1.jpg" alt="Team Member 1">
+            <h3>Archita</h3>
+            <p>Founder</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member-2.jpg" alt="Team Member 2">
+            <h3>Anirudh</h3>
+            <p>Co-Founder</p>
+        </div>
+    </div>
+</section>
+
+<section class="map-section">
+    <p class="heading">Location</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.134389938418!2d80.1490382757749!3d12.840290987464584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f69f3132e8b%3A0x7f9116e90aa23aa4!2sVIT%20Chennai%20Campus!5e0!3m2!1sen!2sin!4v1707312345678!5m2!1sen!2sin" width="777" height="473" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p class="about">
+            <span>About Us:</span> We collect excess food from donors and distribute it to those in need.
+        </p>
+    </div>
+    <div class="footer-center">
+        <p><span>Contact:</span> (+00) 00000-00000</p>
+        <p>Email: <a href="#">anapoorna@gmail.com</a></p>
+        <div class="social">
+            <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="https://www.instagram.com/a.k.n.e.e.r.u.d.e/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <h2>Anna<span class="highlight">poorna</span></h2>
+        <p class="menu">
+            <a href="#">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="profile.php">Profile</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="copyright">Food Donate &copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

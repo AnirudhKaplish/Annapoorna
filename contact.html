@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Annapoorna</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Anna<b class="highlight">poorna</b></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+
+<section class="contact-section">
+
+    <section class="box">
+        <div class="a">
+            <p class="b">Contact Us</p>
+            <div class="c">
+                <p><span>Email:</span> anapoorna@gmail.com</p>
+                <p><span>Phone:</span> 00000-00000</p>
+                <p><span>Address:</span> V.I.T. Chennai</p>
+            </div>
+        </div>
+    </section>
+    <!-- Improved Contact Form -->
+    <div class="contact-form">
+        <p class="form-heading">Send Us A Message</p>
+        <form action="submit_form.php" method="POST">
+            <div class="input-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your message here"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+</section>
+
+<div class="chatbot" style="padding: 30px; background-color: #FFA089;">
+    <p style="font-size: 23px; text-align: center; font-weight: bold;">Chat Bot Support <img src="bot-mini.png" alt=""height="20"></p>
+   
+       
+    <div id="container" class="container">
+       
+   
+           <div id="chat" class="chat">
+               <div id="messages" class="messages"></div>
+               <input id="input" type="text" placeholder="Say something..." autocomplete="off" />
+           </div>
+          
+       </div>
+     <div class="help">
+       <p style="font-size: 23px; text-align: center; padding:10px;">Help & FAQs?</p>
+   
+   <button class="accordion">how to donate food ?</button>
+   <div class="panel">
+     <p>1)click on <a href="donate.html">donate</a> in home page </p>
+     <p>2)fill the details </p>
+     <p>3)click on submit</p>
+   </div>
+   
+   <button class="accordion">How will my donation be used?</button>
+   <div class="panel">
+     <p style="padding: 10px;"> Your donation will be used to support our mission and the various programs and initiatives that we have in place. Your donation will help us to continue providing assistance and support to those in need. You can find more information about our programs and initiatives on our website. If you have any specific questions or concerns, please feel free to contact us</p>
+   </div>
+   
+   <button class="accordion">What should I do if my food donation is near or past its expiration date?</button>
+   <div class="panel">
+     <p style="padding: 10px;">We appreciate your willingness to donate, but to ensure the safety of our clients we can't accept food that is near or past its expiration date. We recommend checking expiration dates before making a donation or contact us for further guidance</p>
+     
+   </div>
+     </div>
+   
+     </div>
+    
+       
+   </body>
+   <script type="text/javascript" src="chatbot.js" ></script>
+   <script type="text/javascript" src="constants.js" ></script> 
+   <script type="text/javascript" src="speech.js" ></script>
+   <script>
+       var acc = document.getElementsByClassName("accordion");
+       var i;
+       
+       for (i = 0; i < acc.length; i++) {  
+         acc[i].addEventListener("click", function() {
+           this.classList.toggle("active");
+           var panel = this.nextElementSibling;
+           if (panel.style.maxHeight) {
+             panel.style.maxHeight = null;
+           } else {
+             panel.style.maxHeight = panel.scrollHeight + "px";
+           } 
+         });
+       }
+       </script>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p class="about">
+            <span>About Us:</span> We collect excess food from donors and distribute it to those in need.
+        </p>
+    </div>
+    <div class="footer-center">
+        <p><span>Contact:</span> (+00) 00000-00000</p>
+        <p>Email: <a href="#">anapoorna@gmail.com</a></p>
+        <div class="social">
+            <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="https://www.instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <h2>Anna<span class="highlight">poorna</span></h2>
+        <p class="menu">
+            <a href="#">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="profile.php">Profile</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="copyright">Food Donate &copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

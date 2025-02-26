@@ -1,0 +1,187 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #FF5733;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #fff700;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+}
+
+/* Selection Section */
+.selection-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 50px;
+    color: white;
+}
+
+.selection-container h2 {
+    font-size: 36px;
+    color: #FF5733;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-donor {
+    background-color: #FF5733;
+}
+
+.btn-donor:hover {
+    background-color: #e04c2f;
+}
+
+.btn-ngo {
+    background-color: #4CAF50;
+}
+
+.btn-ngo:hover {
+    background-color: #45a249;
+}
+
+.btn-admin {
+    background-color: #007bff;
+}
+
+.btn-admin:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .selection-section {
+        width: 95%;
+        padding: 40px;
+    }
+
+    .selection-container h2 {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: #FF5733;
+        padding: 10px;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+}

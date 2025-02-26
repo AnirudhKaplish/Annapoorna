@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #FF5733;
+  padding: 15px;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #fff700;
+}
+
+/* Navigation */
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FF5733;
+}
+
+.para {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Team Section */
+.team-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f1f1f1;
+}
+
+.team-section .heading {
+  font-size: 28px;
+  color: #FF5733;
+  margin-bottom: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  margin-top: 15px;
+  color: #FF5733;
+}
+
+/* Map Section */
+.map-section {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer .social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social img {
+  width: 30px;
+  margin: 10px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar {
+      display: none;
+      flex-direction: column;
+      background: #FF5733;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .nav-bar.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .team-container {
+      flex-direction: column;
+  }
+}

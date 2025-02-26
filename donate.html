@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Annapoorna</title>
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Anna<b class="highlight">poorna</b></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+<div class="form-container">
+    <h1 style="color: #FF5733;">Food Inventory Form</h1>
+    <form id="foodForm">
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" name="foodName" required>
+
+        <div class="radio-group">
+            <label>Type:</label>
+            <label for="veg">
+                <input type="radio" id="veg" name="foodType" value="veg"> Veg
+            </label>
+            <label for="nonVeg">
+                <input type="radio" id="nonVeg" name="foodType" value="nonVeg"> Non-Veg
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label>Category:</label>
+            <label for="rawFood">
+                <input type="radio" id="rawFood" name="foodCategory" value="raw food"> Raw Food
+            </label>
+            <label for="cookedFood">
+                <input type="radio" id="cookedFood" name="foodCategory" value="cooked food"> Cooked Food
+            </label>
+            <label for="packetFood">
+                <input type="radio" id="packetFood" name="foodCategory" value="packet food"> Packet Food
+            </label>
+        </div>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <button type="button" onclick="addToList()">Add to List</button>
+    </form>
+
+    <h2>Food List:</h2>
+    <ul id="foodList">
+        <!-- List items will be added here -->
+    </ul>
+
+    <button onclick="submitList()">Submit</button>
+</div>
+
+<script>
+    function addToList() {
+        const foodName = document.getElementById('foodName').value;
+        const foodType = document.querySelector('input[name="foodType"]:checked')?.value;
+        const foodCategory = document.querySelector('input[name="foodCategory"]:checked')?.value;
+        const quantity = document.getElementById('quantity').value;
+
+        if (foodName && foodType && foodCategory && quantity) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${foodName} - ${foodType} - ${foodCategory} - Quantity: ${quantity}`;
+            document.getElementById('foodList').appendChild(listItem);
+
+            document.getElementById('foodForm').reset(); // Reset the form
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+
+    function submitList() {
+        const foodItems = [];
+        const listItems = document.getElementById('foodList').children;
+        for (let item of listItems) {
+            foodItems.push(item.textContent);
+        }
+
+        if (foodItems.length > 0) {
+            alert('Food List Submitted: ' + foodItems.join(', '));
+        } else {
+            alert('No items to submit.');
+        }
+    }
+</script>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p class="about">
+            <span>About Us:</span> We collect excess food from donors and distribute it to those in need.
+        </p>
+    </div>
+    <div class="footer-center">
+        <p><span>Contact:</span> (+00) 00000-00000</p>
+        <p>Email: <a href="#">anapoorna@gmail.com</a></p>
+        <div class="social">
+            <a href="https://www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="https://www.instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <h2>Anna<span class="highlight">poorna</span></h2>
+        <p class="menu">
+            <a href="#">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="profile.php">Profile</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p class="copyright">Food Donate &copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>
